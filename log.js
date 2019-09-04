@@ -30,3 +30,11 @@ var removeElement = function(nums, val) {
 var reverseString = function(s) {
     return s.reverse()
 };
+
+//4.Reverse Integer
+//Given a 32-bit signed integer, reverse digits of an integer.
+
+var reverse = function(x) {
+    let reversed = x.toString().split('').reverse().join('')
+    return Math.sign(x) * parseInt(reversed)
+};
