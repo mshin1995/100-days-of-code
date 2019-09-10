@@ -83,3 +83,17 @@ var deleteNode = function(node) {
     node.val = node.next.val
     node.next = node.next.next
 };
+
+//9.Reverse Linked List
+//Reverse a singly linked list.
+
+var reverseList = function(head) {
+    let pre = null
+    while(head){
+        const next = head.next
+        head.next = pre
+        pre = head
+        head = next
+    }
+    return pre
+};
