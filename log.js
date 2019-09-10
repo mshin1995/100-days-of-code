@@ -97,3 +97,12 @@ var reverseList = function(head) {
     }
     return pre
 };
+
+//10.Merge Sorted List
+//Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+
+var merge = function(nums1, m, nums2, n) {
+    nums1.splice(m)
+    nums1.push(...nums2.splice(0,n))
+    nums1.sort((a, b) => a-b)
+};
