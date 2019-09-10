@@ -48,3 +48,18 @@ var plusOne = function(digits) {
     let added = BigInt(digits.join('')) + BigInt(1)
     return added.toString().split('')
 };
+
+//6.Single Number
+//Given a non-empty array of integers, every element appears twice except for one. Find that single one.
+
+var singleNumber = function(nums) {
+    let array = []
+    for(let i = 0; i < nums.length; i++) {
+        if(array.includes(nums[i])) {
+            array.splice(array.indexOf(nums[i]), 1)
+        } else {
+            array.push(nums[i])
+        }
+    }
+    return array
+};
